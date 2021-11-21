@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form id="contactForm" action="mail.php" method="post" autocomplete="off"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="user_name">Name</label>
+                    <input  id="user_name" name="user_name" type="text" class="form-control">
+                    <small class="form-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="user_email">Email</label>
+                    <input  id="user_email" name="user_email" type="email" class="form-control">
+                    <small class="form-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="user_subject">Subject</label>
+                    <input  id="user_subject" name="user_subject" type="text" class="form-control">
+                    <small class="form-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="user_message">Message</label>
+                    <textarea  id="user_message" name="user_message" rows="6" class="form-control"></textarea>
+                    <small class="form-text"></small>
+                </div>
+                <div class="form-group">
+                    <label for="user_file">Image/File</label>
+                    <input type="file" class="form-control-file" id="user_file" name="user_file[]" multiple>
+                    <small class="form-text"></small>
+                </div>
+                <button type="submit" class="btn btn-success">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">Info!!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="messageModalContent" class="alert alert-success">
+    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.form.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
